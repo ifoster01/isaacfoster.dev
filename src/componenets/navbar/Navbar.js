@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import Headshot from '../assets/Isaac Foster Headshot.jpg'
+import Headshot from '../../assets/Isaac Foster Headshot.jpg'
 
 const Navbar = () => {
   return (

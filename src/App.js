@@ -1,11 +1,13 @@
-import Navbar from './componenets/Navbar';
 import './App.css';
+import Navbar from './componenets/navbar/Navbar';
+import Body from './componenets/body/Body';
 
 function App() {
   return (
     <div>
-      <Navbar /> {/* Include the Navbar component */}
-      {/* Your main content goes here */}
+      <Navbar />
+      {/* Main content */}
+      <Body />
     </div>
   );
 }
