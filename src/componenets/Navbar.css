@@ -1,0 +1,43 @@
+body {
+
+}
+.navul {
+    list-style: none;
+    display: flex;
+    flex-direction: left;
+    align-items: center;
+    height: 100%;
+    padding: 2vmin;
+    margin: 0
+}
+.navli {
+    color: grey;
+    font-size: 3vmin;
+}
+
+/* Navbar list items */
+#navheadshot {
+    margin-left: 3vmin;
+    margin-right: 3vmin;
+}
+#headshot {
+    height: 4vmax;
+    border-radius: 25%;
+}
+#navhome {
+    color: black;
+    margin-left: 3vmin;
+    margin-right: 3vmin;
+}
+#navprojects {
+    margin-left: 3vmin;
+    margin-right: 3vmin;
+}
+#navabout {
+    margin-left: 3vmin;
+    margin-right: 3vmin;
+}
+#navcontact {
+    margin-left: 3vmin;
+    margin-right: 3vmin;
+}
