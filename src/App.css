@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'HelveticaLTStd-Light';
-  src: url('./assets/HelveticaLTStd-Light.otf') format('opentype');
+  src: url('./assets/fonts/HelveticaLTStd-Light.otf') format('opentype');
 }
 @font-face {
   font-family: 'HelveticaLTStd-Bold';
-  src: url('./assets/HelveticaLTStd-Bold.otf') format('opentype');
+  src: url('./assets/fonts/HelveticaLTStd-Bold.otf') format('opentype');
 }
 
 .app {
