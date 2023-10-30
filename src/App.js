@@ -4,7 +4,7 @@ import Body from './componenets/body/Body';
 
 function App() {
   return (
-    <div>
+    <div className='app'>
       <Navbar />
       {/* Main content */}
       <Body />

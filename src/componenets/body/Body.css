@@ -1,0 +1,24 @@
+.bodycontainer {
+    color: whitesmoke;
+}
+.bodybackground {
+    width: 100%;
+}
+.bodyheader {
+    margin: 0;
+    font-size: 15vmin;
+    padding-left: 4vmin;
+    padding-right: 4vmin;
+    font-family: 'HelveticaLTStd-Bold';
+}
+.bodytext {
+    margin: 0;
+    font-size: 10vmin;
+    padding-left: 4vmin;
+    padding-right: 4vmin;
+    font-family: 'HelveticaLTStd-Light';
+    display: flex;
+}
+.myname {
+    font-family: 'HelveticaLTStd-Bold';
+}

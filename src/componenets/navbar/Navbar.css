@@ -1,6 +1,3 @@
-body {
-
-}
 .navul {
     list-style: none;
     display: flex;
@@ -8,10 +5,11 @@ body {
     align-items: center;
     height: 100%;
     padding: 2vmin;
-    margin: 0
+    margin: 0;
+    font-family: 'HelveticaLTStd-Light';
 }
 .navli {
-    color: grey;
+    color: whitesmoke;
     font-size: 3vmin;
 }
 
@@ -25,7 +23,7 @@ body {
     border-radius: 25%;
 }
 #navhome {
-    color: black;
+    color: rgb(230, 209, 177);
     margin-left: 3vmin;
     margin-right: 3vmin;
 }
