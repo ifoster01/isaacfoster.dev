@@ -1,5 +1,6 @@
 .bodycontainer {
     color: whitesmoke;
+    display: flex;
 }
 .bodybackground {
     width: 100%;
@@ -21,4 +22,19 @@
 }
 .myname {
     font-family: 'HelveticaLTStd-Bold';
+}
+#hello {
+    width: 50%;
+}
+#aboutme {
+    padding: 2vmin;
+    margin: 4vmin;
+    background: rgba(77, 77, 77, 0.4);
+    border-radius: 20px;
+}
+#mypicture {
+    width: 50%;
+    background-color: white;
+    margin: 4vmin;
+    color: black;
 }

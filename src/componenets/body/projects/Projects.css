@@ -1,0 +1,31 @@
+body {
+
+}
+.projectslist {
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin-right: 4vmax;
+    margin-left: 4vmax;
+}
+.projectslist li {
+    background: rgba(247, 247, 247, 0.4);
+    height: 60vmin;
+    margin-right: 8vmax;
+    margin-left: 8vmax;
+    margin-top: 4vmin;
+    margin-bottom: 4vmin;
+    padding: 2vmin;
+    border-radius: 20px;
+}
+#aixuscard {
+    display: flex;
+    justify-content: space-around;
+}
+#aixustitle {
+    width: 30%;
+}
+.imgcontainer {
+    width: 70%;
+}
