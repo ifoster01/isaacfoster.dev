@@ -14,7 +14,7 @@
 }
 .bodytext {
     margin: 0;
-    font-size: 10vmin;
+    font-size: 9vmin;
     padding-left: 4vmin;
     padding-right: 4vmin;
     font-family: 'HelveticaLTStd-Light';
@@ -29,7 +29,7 @@
 #aboutme {
     padding: 2vmin;
     margin: 4vmin;
-    background: rgba(77, 77, 77, 0.4);
+    background: rgba(77, 77, 77, 0.7);
     border-radius: 20px;
 }
 #mypicture {
@@ -37,4 +37,8 @@
     background-color: white;
     margin: 4vmin;
     color: black;
+}
+.myimage {
+    width: 100%;
+    height: 100%;
 }

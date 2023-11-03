@@ -3,6 +3,7 @@ import Projects from './projects/Projects';
 import Resume from './resume/Resume';
 import Contact from './contact/Contact';
 import './Body.css';
+import bodyimage from '../../assets/body img.jpg'
 
 const Body = () => {
   return (
@@ -21,8 +22,7 @@ const Body = () => {
             </p>
           </div>
           <div id='mypicture'>
-            img placeholder
-            {/* <img src='' alt='Isaac' className='myimage' /> */}
+            <img src={bodyimage} alt='Isaac' className='myimage' />
           </div>
         </div>
         <Projects />

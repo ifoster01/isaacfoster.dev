@@ -19,13 +19,28 @@ body {
     padding: 2vmin;
     border-radius: 20px;
 }
-#aixuscard {
+.projectcard {
     display: flex;
     justify-content: space-around;
 }
-#aixustitle {
+.projecttitle {
     width: 30%;
 }
 .imgcontainer {
     width: 70%;
+}
+#aixusimg {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+}
+#aixuscard {
+    margin-top: 8vmax;
+}
+#bidosimg {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 17%;
+    margin-bottom: 17%;
 }
