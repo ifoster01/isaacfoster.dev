@@ -29,7 +29,7 @@ const Projects = () => {
               BestProfessorList
             </h1>
             <div className='imgcontainer'>
-              <img classname='projectimg' src={BPL} alt='BestProfessorList'/>
+              <img id='bplimg' src={BPL} alt='BestProfessorList'/>
             </div>
           </li>
         </ul>
