@@ -1,7 +1,8 @@
 import React from 'react';
 import './Projects.css';
-import Aixus from '../../../assets/aixus icon.png';
+import Aixus from '../../../assets/aixus logo.png';
 import BidOS from '../../../assets/bidos logo.png';
+import BPL from '../../../assets/bpl logo.png';
 
 const Projects = () => {
   return (
@@ -28,7 +29,7 @@ const Projects = () => {
               BestProfessorList
             </h1>
             <div className='imgcontainer'>
-              <img classname='projectimg' src='https://i.imgur.com/2ZQ4Z5X.png' alt='BestProfessorList'/>
+              <img classname='projectimg' src={BPL} alt='BestProfessorList'/>
             </div>
           </li>
         </ul>
