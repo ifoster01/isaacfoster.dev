@@ -32,6 +32,14 @@ const Projects = () => {
               <img id='bplimg' src={BPL} alt='BestProfessorList'/>
             </div>
           </li>
+          <li className='projectcard'>
+            <h1 className='projecttitle'>
+              BestProfessorList
+            </h1>
+            <div className='imgcontainer'>
+              <img id='' src='https://i.imgur.com/2ZQ4Z5X.png' alt='BestProfessorList'/>
+            </div>
+          </li>
         </ul>
     </body>
   );
