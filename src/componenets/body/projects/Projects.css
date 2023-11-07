@@ -30,10 +30,17 @@ body {
     align-items: center;
     object-fit: contain;
 }
+.titleimg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
 .projectwrapper {
     text-align: center;
     display: inline-block;
     width: 30%;
+    height: 100%;
     margin-left: 5%;
     color: rgb(253, 253, 253);
 }
@@ -50,6 +57,7 @@ body {
     object-fit: contain;
     width: 100%;
     height: 100%;
+    border-radius: 3%;
 }
 #aixuscard {
     /* margin-top: 3vmax; */
