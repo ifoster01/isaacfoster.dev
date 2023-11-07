@@ -8,6 +8,16 @@
 }
 
 .app {
-  background-image: url('./assets/Body\ Background\ 2.jpg');
   background-size: 100% 100vh;
+  background-color: #e1e1e1;
+  background-image: linear-gradient(
+    to bottom, transparent, #e1e1e1 100%
+  ), url('./assets/Body\ Background\ 2.jpg');
+  background-repeat: no-repeat;
+  /* background-image: url('./assets/Body\ Background\ 2.jpg');
+  background-repeat: no-repeat;
+  background-color: linear-gradient(#a8875e, white);
+  background-blend-mode: overlay; */
+  /* background: url('./assets/Body\ Background\ 2.jpg') no-repeat left top, linear-gradient(#a8875e, white);; */
+  /* background-image: linear-gradient(#a8875e, white); */
 }

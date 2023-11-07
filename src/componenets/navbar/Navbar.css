@@ -1,3 +1,14 @@
+.mynav {
+    position: fixed;
+    width: 100%;
+    color: whitesmoke;
+}
+.scrolled {
+    background-color: white;
+    transition: background-color 0.5s ease-in-out;
+    opacity: 0.9;
+    color: rgba(149, 149, 149);
+}
 .navul {
     list-style: none;
     display: flex;
@@ -9,7 +20,6 @@
     font-family: 'HelveticaLTStd-Light';
 }
 .navli {
-    color: whitesmoke;
     font-size: 3vmin;
 }
 

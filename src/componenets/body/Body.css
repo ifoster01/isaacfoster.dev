@@ -1,6 +1,7 @@
 .bodycontainer {
-    color: whitesmoke;
+    color: rgb(246, 246, 246);
     display: flex;
+    padding-top: 7%;
 }
 .bodybackground {
     width: 100%;
@@ -37,8 +38,10 @@
     background-color: white;
     margin: 4vmin;
     color: black;
+    border-radius: 5%;
 }
 .myimage {
     width: 100%;
     height: 100%;
+    border-radius: 5%;
 }

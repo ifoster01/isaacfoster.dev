@@ -1,6 +1,11 @@
 body {
 
 }
+.projectheader {
+    padding-left: 4vmin;
+    color: rgb(253, 253, 253);
+    font-size: 5vmax;
+}
 .projectslist {
     text-decoration: none;
     list-style-type: none;
@@ -10,7 +15,7 @@ body {
     margin-left: 4vmax;
 }
 .projectslist li {
-    background: rgba(247, 247, 247, 0.4);
+    /* background: rgba(208, 208, 208, 0.6); */
     height: 60vmin;
     margin-right: 8vmax;
     margin-left: 8vmax;
@@ -29,6 +34,8 @@ body {
     text-align: center;
     display: inline-block;
     width: 30%;
+    margin-left: 5%;
+    color: rgb(253, 253, 253);
 }
 .projecttitle {
     width: 100%;
@@ -36,7 +43,7 @@ body {
 }
 .imgcontainer {
     height: 100%;
-    width: 70%;
+    width: 65%;
     margin: 0;
 }
 .projectimg {
@@ -45,5 +52,5 @@ body {
     height: 100%;
 }
 #aixuscard {
-    margin-top: 8vmax;
+    /* margin-top: 3vmax; */
 }
