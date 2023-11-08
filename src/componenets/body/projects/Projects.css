@@ -29,29 +29,36 @@ body {
     justify-content: space-around;
     align-items: center;
     object-fit: contain;
+    /* --webkit--box--shadow: inset 0 0 40px 20px;
+    background : rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 40px 20px #b6c5d5; */
 }
 .titleimg {
     width: 100%;
     height: 100%;
     object-fit: contain;
-
 }
 .projectwrapper {
     text-align: center;
     display: inline-block;
+    vertical-align: middle;
     width: 30%;
     height: 100%;
-    margin-left: 5%;
     color: rgb(253, 253, 253);
 }
 .projecttitle {
     width: 100%;
     text-align: center;
 }
-.imgcontainer {
+.rightimgcontainer {
     height: 100%;
     width: 65%;
-    margin: 0;
+    margin-left: 3%;
+}
+.leftimgcontainer {
+    height: 100%;
+    width: 65%;
+    margin-right: 3%;
 }
 .projectimg {
     object-fit: contain;
