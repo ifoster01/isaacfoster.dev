@@ -5,6 +5,7 @@ import AixusTitle from '../../../assets/aixus title logo.png'
 import AixusScreen from '../../../assets/Aixus Dashboard Screen.png';
 import Readee from '../../../assets/readee logo.png';
 import ReadeeVideo from '../../../assets/Readee Demonstration Video.mp4';
+import ReadeeFull from '../../../assets/Readee Logo Full.png'
 import BidOS from '../../../assets/bidos logo.png';
 import BidOSScreen from '../../../assets/bidos screen.png'
 import BPL from '../../../assets/bpl logo.png';
@@ -38,9 +39,9 @@ const Projects = () => {
             {/* <img className='projectimg' id='readeeimg' src={Readee} alt='BestProfessorList'/> */}
           </div>
           <div className='projectwrapper'>
-            <h1 className='projecttitle'>
-              Readee
-            </h1>
+            <div className='projecttitle'>
+              <img className='titleimg' id='bidostitleimg' src={ReadeeFull} alt='BidOS' />
+            </div>
             <p>
               Readee is a chrome extension that provides users with a 3D model and a definition of a word they select from the website.
             </p>
