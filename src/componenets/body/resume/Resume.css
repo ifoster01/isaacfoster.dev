@@ -1,0 +1,21 @@
+.resumebody {
+    background: linear-gradient(#b6c5d5, 30%, white);
+}
+.resumeheader {
+    padding-left: 4vmin;
+    color: rgb(253, 253, 253);
+    font-size: 5vmax;
+}
+.resume {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.resumecontainer {
+    height: 80vh;
+    width: 60%;
+}
+.resumepdf {
+    height: 100%;
+    width: 100%;
+}

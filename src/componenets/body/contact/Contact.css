@@ -1,0 +1,27 @@
+.contactbody {
+    background: linear-gradient(white, 30%, #b6c5d5);
+    padding-top: 4%;
+}
+.contactheader {
+    padding-left: 4vmin;
+    color: rgb(253, 253, 253);
+    font-size: 5vmax;
+}
+.contactblurb {
+    text-align: center;
+    color: rgb(253, 253, 253);
+    font-size: 2vmax;
+    padding-left: 5vmax;
+    padding-right: 5vmax;
+}
+.contactpoints {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4vmax;
+    padding-bottom: 4vmax;
+    list-style-type: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+}
