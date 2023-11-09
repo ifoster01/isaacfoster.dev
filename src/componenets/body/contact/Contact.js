@@ -2,7 +2,6 @@ import React from 'react';
 import './Contact.css';
 import LinkedIn from '../../../assets/linkedin.png';
 import GitHub from '../../../assets/github.png';
-import { Link } from '@aws-amplify/ui-react';
 
 const Contact = () => {
   return (
