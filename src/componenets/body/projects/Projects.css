@@ -40,8 +40,9 @@
 }
 .projectwrapper {
     text-align: center;
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 30%;
     height: 100%;
     color: rgb(253, 253, 253);

@@ -26,7 +26,7 @@ const Body = () => {
                 a software developer
               </p>
               <p id='aboutme'>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                I study computer science at Rensselaer Polytechnic Institute and I'm graduating in Spring 2024. The past two summers I've worked as a software development intern at deFacto Global, a local software solutions company built for budgeting, forecasting, and analysis. Additionally, this past summer I worked as a full stack developer at a startup, Aixus Health, which provides an interface for patients and providers.
               </p>
             </div>
             <div id='mypicture'>
