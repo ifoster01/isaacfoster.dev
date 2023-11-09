@@ -12,7 +12,7 @@ const Navbar = ({ refHome, refProject, refResume, refContact }) => {
   const handleScroll = () => {
     const offset = window.scrollY;
     const scrollHeight = document.documentElement.scrollHeight;
-    const clientHeight = document.documentElement.clientHeight;
+    // const clientHeight = document.documentElement.clientHeight;
     // console.log("scrolled y:" + offset);
     // console.log("scroll height:" + scrollHeight)
     // console.log("client height:" + clientHeight)
@@ -49,7 +49,16 @@ const Navbar = ({ refHome, refProject, refResume, refContact }) => {
   }
 
   const homeClick = () => {
-    // refHome.current.scrollIntoView({behavior: 'smooth'})
+    refHome.current.scrollIntoView({behavior: 'smooth'})
+  }
+  const projectClick = () => {
+    refProject.current.scrollIntoView({behavior: 'smooth'})
+  }
+  const resumeClick = () => {
+    refResume.current.scrollIntoView({behavior: 'smooth'})
+  }
+  const contactClick = () => {
+    refContact.current.scrollIntoView({behavior: 'smooth'})
   }
   
   useEffect(() => {
@@ -70,17 +79,17 @@ const Navbar = ({ refHome, refProject, refResume, refContact }) => {
           </button>
         </li>
         <li className='navli' id='navprojects'>
-          <button className={isActiveProject ? 'activenav' : 'navbutton'}>
+          <button className={isActiveProject ? 'activenav' : 'navbutton'} onClick={projectClick}>
             Projects
           </button>
         </li>
         <li className='navli' id='navabout'>
-          <button className={isActiveResume ? 'activenav' : 'navbutton'}>
+          <button className={isActiveResume ? 'activenav' : 'navbutton'} onClick={resumeClick}>
             Resume
           </button>
         </li>
         <li className='navli' id='navcontact'>
-          <button className={isActiveContact ? 'activenav' : 'navbutton'}>
+          <button className={isActiveContact ? 'activenav' : 'navbutton'} onClick={contactClick}>
             Contact
           </button>
         </li>

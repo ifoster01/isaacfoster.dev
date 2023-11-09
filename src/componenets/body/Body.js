@@ -16,7 +16,7 @@ const Body = () => {
     <>
       <Navbar refHome={refHome} refProject={refProject} refResume={refResume} refContact={refContact} />
       <body className='webbody'>
-          <div className='bodycontainer'>
+          <div className='bodycontainer' ref={refHome}>
             <div id='hello'>
               <h1 className='bodyheader'>Hello!</h1>
               <p className='bodytext'>
@@ -33,9 +33,15 @@ const Body = () => {
               <img src={bodyimage} alt='Isaac' className='myimage' />
             </div>
           </div>
-          <Projects />
-          <Resume />
-          <Contact />
+          <div ref={refProject}>
+            <Projects />
+          </div>
+          <div ref={refResume}>
+            <Resume />
+          </div>
+          <div ref={refContact}>
+            <Contact />
+          </div>
       </body>
     </>
   );
