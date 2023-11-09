@@ -46,3 +46,10 @@
     object-fit: contain;
     border-radius: 5%;
 }
+.footertext {
+    text-align: center;
+    width: 100%;
+    font-size: 2vmin;
+    background-color: whitesmoke;
+    color: rgb(172, 172, 172);
+}

@@ -43,6 +43,9 @@ const Body = () => {
             <Contact />
           </div>
       </body>
+      <footer className='footertext'>
+        ** Website designed and implemented by Isaac Foster **
+      </footer>
     </>
   );
 };
