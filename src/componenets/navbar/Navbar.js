@@ -74,22 +74,34 @@ const Navbar = ({ refHome, refProject, refResume, refContact }) => {
           </a>
         </li>
         <li className='navli' id='navhome'>
-          <button className={isActiveHome ? 'activenav' : 'navbutton'} onClick={homeClick}>
+          <button className={
+            isActiveHome ? 'activenav' : 
+              (scrolled ? 'navbuttonscrolled' : 'navbutton')
+            } onClick={homeClick}>
             Home
           </button>
         </li>
         <li className='navli' id='navprojects'>
-          <button className={isActiveProject ? 'activenav' : 'navbutton'} onClick={projectClick}>
+          <button className={
+            isActiveProject ? 'activenav' : 
+              (scrolled ? 'navbuttonscrolled' : 'navbutton')
+            } onClick={projectClick}>
             Projects
           </button>
         </li>
         <li className='navli' id='navabout'>
-          <button className={isActiveResume ? 'activenav' : 'navbutton'} onClick={resumeClick}>
+          <button className={
+            isActiveResume ? 'activenav' : 
+              (scrolled ? 'navbuttonscrolled' : 'navbutton')
+            } onClick={resumeClick}>
             Resume
           </button>
         </li>
         <li className='navli' id='navcontact'>
-          <button className={isActiveContact ? 'activenav' : 'navbutton'} onClick={contactClick}>
+          <button className={
+            isActiveContact ? 'activenav' : 
+              (scrolled ? 'navbuttonscrolled' : 'navbutton')
+            } onClick={contactClick}>
             Contact
           </button>
         </li>

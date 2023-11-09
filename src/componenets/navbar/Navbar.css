@@ -5,8 +5,7 @@
 }
 .scrolled {
     /* backdrop-filter: blur(20px); */
-    background-color: rgb(172, 172, 172);
-    color: rgba(149, 149, 149);
+    background-color: whitesmoke;
     transition: background-color 0.5s ease-in-out;
     opacity: 0.9;
 }
@@ -31,6 +30,16 @@
     cursor: pointer;
     outline: none;
     color: whitesmoke;
+}
+.navbuttonscrolled {
+    background-color: transparent;
+    border: none;
+    font-size: 3vmin;
+    font-family: 'HelveticaLTStd-Light';
+    cursor: pointer;
+    outline: none;
+    color: rgb(172, 172, 172);
+    transition: color 0.5s ease-in-out;
 }
 .activenav {
     background-color: transparent;
