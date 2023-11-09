@@ -13,7 +13,7 @@ import BPLScreen from '../../../assets/BPL Screen.png';
 
 const Projects = () => {
   return (
-    <body>
+    <body className='projectsbody'>
       <h1 className='projectheader'>
         Projects
       </h1>

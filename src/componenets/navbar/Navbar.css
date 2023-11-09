@@ -5,7 +5,7 @@
 }
 .scrolled {
     /* backdrop-filter: blur(20px); */
-    background-color: white;
+    background-color: rgb(172, 172, 172);
     color: rgba(149, 149, 149);
     transition: background-color 0.5s ease-in-out;
     opacity: 0.9;
@@ -23,6 +23,24 @@
 .navli {
     font-size: 3vmin;
 }
+.navbutton {
+    background-color: transparent;
+    border: none;
+    font-size: 3vmin;
+    font-family: 'HelveticaLTStd-Light';
+    cursor: pointer;
+    outline: none;
+    color: whitesmoke;
+}
+.activenav {
+    background-color: transparent;
+    border: none;
+    font-size: 3vmin;
+    font-family: 'HelveticaLTStd-Light';
+    cursor: pointer;
+    outline: none;
+    color: rgb(230, 209, 177);
+}
 
 /* Navbar list items */
 #navheadshot {
@@ -34,7 +52,6 @@
     border-radius: 25%;
 }
 #navhome {
-    color: rgb(230, 209, 177);
     margin-left: 3vmin;
     margin-right: 3vmin;
 }

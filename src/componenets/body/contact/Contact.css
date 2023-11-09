@@ -11,17 +11,47 @@
     text-align: center;
     color: rgb(253, 253, 253);
     font-size: 2vmax;
-    padding-left: 5vmax;
-    padding-right: 5vmax;
+    padding-left: 8vmax;
+    padding-right: 8vmax;
 }
 .contactpoints {
-    display: flex;
-    justify-content: space-around;
+    color: rgb(253, 253, 253);
+    justify-content: center;
     align-items: center;
+    display: flex;
+    text-align: center;
     padding-top: 4vmax;
     padding-bottom: 4vmax;
     list-style-type: none;
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 0;
+}
+.linkedin {
+    padding-right: 4vmax;
+    width: 13%;
+    height: 13%;
+    transition: 0.3s;
+}
+.github {
+    padding-left: 4vmax;
+    width: 13%;
+    height: 13%;
+    transition: 0.3s;
+}
+.linkedin:hover {
+    width: 15%;
+    height: 15%;
+    transition: 0.3s;
+}
+.github:hover {
+    width: 15%;
+    height: 15%;
+    transition: 0.3s;
+}
+.contactimg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 7%;
 }

@@ -4,15 +4,44 @@ import Headshot from '../../assets/Isaac Foster Headshot.jpg'
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const refNavbar = useRef();
+  const refNavbar = useRef(null);
+  const [isActiveHome, setActiveHome] = useState(true);
+  const [isActiveProject, setActiveProject] = useState(false);
+  const [isActiveResume, setActiveResume] = useState(false);
+  const [isActiveContact, setActiveContact] = useState(false);
 
   const handleScroll = () => {
     const offset = window.scrollY;
-    if(offset > 0 ){
+    // console.log(offset);
+    if (offset > 0 ){
       setScrolled(true);
     }
-    else{
+    else {
       setScrolled(false);
+    }
+    if (offset < 534) {
+      setActiveHome(true);
+      setActiveProject(false);
+      setActiveResume(false);
+      setActiveContact(false);
+    }
+    if (offset > 534) {
+      setActiveHome(false);
+      setActiveProject(true);
+      setActiveResume(false);
+      setActiveContact(false);
+    }
+    if (offset > 2134) {
+      setActiveHome(false);
+      setActiveProject(false);
+      setActiveResume(true);
+      setActiveContact(false);
+    }
+    if (offset > 2586) {
+      setActiveHome(false);
+      setActiveProject(false);
+      setActiveResume(false);
+      setActiveContact(true);
     }
   }
   
@@ -29,16 +58,24 @@ const Navbar = () => {
           </a>
         </li>
         <li className='navli' id='navhome'>
-          Home
+          <button className={isActiveHome ? 'activenav' : 'navbutton'}>
+            Home
+          </button>
         </li>
         <li className='navli' id='navprojects'>
-          Projects
+          <button className={isActiveProject ? 'activenav' : 'navbutton'}>
+            Projects
+          </button>
         </li>
         <li className='navli' id='navabout'>
-          Resume
+          <button className={isActiveResume ? 'activenav' : 'navbutton'}>
+            Resume
+          </button>
         </li>
         <li className='navli' id='navcontact'>
-          Contact
+          <button className={isActiveContact ? 'activenav' : 'navbutton'}>
+            Contact
+          </button>
         </li>
       </ul>
     </nav>

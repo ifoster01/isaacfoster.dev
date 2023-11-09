@@ -1,9 +1,13 @@
 .resumebody {
-    background: linear-gradient(#b6c5d5, 30%, white);
+    /* background: linear-gradient(#b6c5d5, 30%, white); */
+    background-color: white;
+    padding-top: 0;
+    margin-top: -3.32%;
 }
 .resumeheader {
     padding-left: 4vmin;
-    color: rgb(253, 253, 253);
+    /* color: rgb(253, 253, 253); */
+    color: #b6c5d5;
     font-size: 5vmax;
 }
 .resume {
