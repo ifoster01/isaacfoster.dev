@@ -4,7 +4,7 @@ import Navbar from '../navbar/Navbar';
 import Projects from './projects/Projects';
 import Resume from './resume/Resume';
 import Contact from './contact/Contact';
-import bodyimage from '../../assets/body img.jpg'
+import bodyimage from '../../assets/Isaac Foster Body.jpg'
 
 const Body = () => {
   const refHome = useRef(null);

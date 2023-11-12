@@ -24,7 +24,7 @@ const Projects = () => {
               <img className='titleimg' src={AixusTitle} alt='Aixus Helth' />
             </div>
             <p>
-              Aixus Health is a web application that provides patients with a comprehentive interface to communicate with their healthcare providers.
+              Aixus Health is a startup developing a web application that provides patients with a comprehentive interface to communicate with their healthcare providers with an emphasis on informed consent and outpatient care. The stack consists of a React, Next.js, Tailwind CSS, and TypeScript frontent with a Supabase backend.
             </p>
           </div>
           <div className='rightimgcontainer'>
@@ -43,7 +43,7 @@ const Projects = () => {
               <img className='titleimg' id='bidostitleimg' src={ReadeeFull} alt='BidOS' />
             </div>
             <p>
-              Readee is a chrome extension that provides users with a 3D model and a definition of a word they select from the website.
+              Readee is a chrome extension providing users with 3D models and context specific definitions of words they select on a given website. It uses Echo3D's JS SDK, and GPT-4 API via Node.js hosted on an Amazon AWS EC2 instance. The front-end and button injection was made by using HTML, CSS, and JavaScript.
             </p>
           </div>
         </li>
@@ -53,7 +53,7 @@ const Projects = () => {
               <img className='titleimg' id='bidostitleimg' src={BidOS} alt='BidOS' />
             </div>
             <p>
-              BidOS is a crowd funding platform for open source projects. 
+              BidOS is an open source crowd funding platform for open source projects. The goal is to provide open source contributors with a way to sustain themselves while working on open source projects. The stack consists of a React and Node.js frontent with a AWS DynamoDB backend.
             </p>
           </div>
           <div className='rightimgcontainer'>
@@ -70,7 +70,7 @@ const Projects = () => {
               BestProfessorList
             </h1>
             <p>
-              BestProfessorList is a website that provides students with a way to search for classes and view a list of the top rated professors for that class.
+              BestProfessorList is a website providing students with a way to search for classes and view a list of the top rated professors for that class. It aims to streamline the class search and registration process for RPI students. The frontent was built using React and Node.js, and the backend was built using AWS DynamoDB.
             </p>
           </div>
         </li>
