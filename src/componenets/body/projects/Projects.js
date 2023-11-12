@@ -21,14 +21,16 @@ const Projects = () => {
         <li className='projectcard' id='aixuscard'>
         <div className='projectwrapper'>
             <div className='projecttitle'>
-              <img className='titleimg' src={AixusTitle} alt='Aixus Helth' />
+                <img className='titleimg' src={AixusTitle} alt='Aixus Helth' />
             </div>
             <p>
               Aixus Health is a startup developing a web application that provides patients with a comprehentive interface to communicate with their healthcare providers with an emphasis on informed consent and outpatient care. The stack consists of a React, Next.js, Tailwind CSS, and TypeScript frontent with a Supabase backend.
             </p>
           </div>
           <div className='rightimgcontainer'>
-            <img className='projectimg' id='aixusimg' src={AixusScreen} alt='Aixus Health'/>
+            <a href='https://www.aixushealth.com/' target='_blank'>
+              <img className='projectimg' id='aixusimg' src={AixusScreen} alt='Aixus Health'/>
+            </a>
           </div>
         </li>
         <li className='projectcard'>
@@ -40,7 +42,9 @@ const Projects = () => {
           </div>
           <div className='projectwrapper'>
             <div className='projecttitle'>
-              <img className='titleimg' id='bidostitleimg' src={ReadeeFull} alt='BidOS' />
+              <a href='https://github.com/tommycbird/Readee' target='_blank'>
+                <img className='titleimg' id='readeeimg' src={ReadeeFull} alt='BidOS' />
+              </a>
             </div>
             <p>
               Readee is a chrome extension providing users with 3D models and context specific definitions of words they select on a given website. It uses Echo3D's JS SDK, and GPT-4 API via Node.js hosted on an Amazon AWS EC2 instance. The front-end and button injection was made by using HTML, CSS, and JavaScript.
@@ -57,13 +61,18 @@ const Projects = () => {
             </p>
           </div>
           <div className='rightimgcontainer'>
-            <img className='projectimg' id='bidosimg' src={BidOSScreen} alt='BidOS'/>
+            <a href='https://bidos.net/' target='_blank'>
+              <img className='projectimg' id='bidosimg' src={BidOSScreen} alt='BidOS'/>
+            </a>
           </div>
         </li>
         <li className='projectcard'>
           <div className='leftimgcontainer'>
-            {/* <a href='https://main.d1wj2utf4l5y91.amplifyapp.com/'></a> */}
-            <img className='projectimg' id='bplimg' src={BPLScreen} alt='BestProfessorList'/>
+            <a href='https://main.d1wj2utf4l5y91.amplifyapp.com/' target='_blank' className='imglink'>
+              <img className='projectimg' id='bplimg' src={BPLScreen} alt='BestProfessorList'/>
+            </a>
+            {/* <div className='imgoverlay'>
+            </div> */}
           </div>
           <div className='projectwrapper'>
             <h1 className='projecttitle'>

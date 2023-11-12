@@ -67,6 +67,31 @@
     height: 100%;
     border-radius: 3%;
 }
-#aixuscard {
-    /* margin-top: 3vmax; */
+#readeeimg {
+    transition: 0.3s;
+}
+#readeeimg:hover {
+    width: 110%;
+    transition: 0.3s;
+}
+#aixusimg {
+    transition: 0.3s;
+}
+#aixusimg:hover {
+    width: 103%;
+    transition: 0.3s;
+}
+#bidosimg {
+    transition: 0.3s;
+}
+#bidosimg:hover {
+    width: 103%;
+    transition: 0.3s;
+}
+#bplimg {
+    transition: 0.3s;
+}
+#bplimg:hover {
+    width: 103%;
+    transition: 0.3s;
 }
