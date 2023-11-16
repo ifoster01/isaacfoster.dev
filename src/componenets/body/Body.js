@@ -33,32 +33,32 @@ const Body = () => {
     <>
       <Navbar refHome={refHome} refProject={refProject} refResume={refResume} refContact={refContact} mobileNav={isMobile} />
       <body className='webbody'>
-          <div className='bodycontainer' ref={refHome}>
-            <div id='hello'>
-              <h1 className='bodyheader'>Hello!</h1>
-              <p className='bodytext'>
-                I'm <div className='myname'>&nbsp;Isaac</div>,
-              </p>
-              <p className='bodytext'>
-                a software developer
-              </p>
-              <p id='aboutme'>
-                I study computer science at Rensselaer Polytechnic Institute and I'm graduating in Spring 2024. The past two summers I've worked as a software development intern at deFacto Global, a local software solutions company built for budgeting, forecasting, and analysis. Additionally, this past summer I worked as a full stack developer at a startup, Aixus Health, which provides an interface for patients and providers.
-              </p>
-            </div>
-            <div id='mypicture'>
-              <img src={bodyimage} alt='Isaac' className='myimage' />
-            </div>
+        <div className='bodycontainer' ref={refHome}>
+          <div id='hello'>
+            <h1 className='bodyheader'>Hello!</h1>
+            <p className='bodytext'>
+              I'm <div className='myname'>&nbsp;Isaac</div>,
+            </p>
+            <p className='bodytext'>
+              a software developer
+            </p>
+            <p id='aboutme'>
+              I study computer science at Rensselaer Polytechnic Institute and I'm graduating in Spring 2024. The past two summers I've worked as a software development intern at deFacto Global, a local software solutions company built for budgeting, forecasting, and analysis. Additionally, this past summer I worked as a full stack developer at a startup, Aixus Health, which provides an interface for patients and providers.
+            </p>
           </div>
-          <div ref={refProject}>
-            <Projects />
+          <div id='mypicture'>
+            <img src={bodyimage} alt='Isaac' className='myimage' />
           </div>
-          <div ref={refResume}>
-            <Resume />
-          </div>
-          <div ref={refContact}>
-            <Contact />
-          </div>
+        </div>
+        <div ref={refProject}>
+          <Projects />
+        </div>
+        <div ref={refResume}>
+          <Resume />
+        </div>
+        <div ref={refContact}>
+          <Contact />
+        </div>
       </body>
       <footer className='footertext'>
         ** Website designed and implemented by Isaac Foster **
