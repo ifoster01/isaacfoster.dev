@@ -83,6 +83,7 @@
     .mynav {
         position: fixed;
         width: 100vw;
+        height: 5vh;
         color: whitesmoke;
     }
     .navul {
@@ -90,17 +91,25 @@
         display: flex;
         flex-direction: left;
         align-items: center;
+        justify-content: space-around;
+        vertical-align: middle;
         height: 100%;
-        width: 100VW;
-        padding: 2vmin;
+        width: 100vw;
+        padding: 0;
         margin: 0;
         font-family: 'HelveticaLTStd-Light';
     }
+    .scrolled {
+        /* backdrop-filter: blur(20px); */
+        background-color: whitesmoke;
+        transition: background-color 0.5s ease-in-out;
+        opacity: 0.9;
+    }
     .navli {
         display: block;
-        height: 5%;
-        width: 20%;
+        height: 100%;
         margin: 0;
+        justify-content: center;
     }
     .navlogo {
         height: 100%;
@@ -109,9 +118,18 @@
     }
     .myicon {
         height: 100%;
-        width: 90%;
+        width: 100%;
+        padding-left: 2vw;
+        padding-top: 1.5vmin;
+    }
+    .navbutton {
+        height: 100%;
+        align-items: center;
+    }
+    .activenav {
+        height: 100%;
     }
     #navheadshot {
-        width: 20%;
+        padding-top: 2.25vmin;
     }
 }

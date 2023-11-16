@@ -5,7 +5,7 @@ import {
   CodeBracketSquareIcon,
   ClipboardDocumentIcon,
   IdentificationIcon
-} from '@heroicons/react/20/solid'
+} from '@heroicons/react/24/outline'
 import './Navbar.css';
 import Headshot from '../../assets/Isaac Foster Headshot.jpg'
 
@@ -80,11 +80,11 @@ const Navbar = ({ refHome, refProject, refResume, refContact, mobileNav }) => {
   return (
     <>
       { mobileNav ?
-        <nav className='mynav'>
+        <nav className={scrolled ? 'mynav scrolled' : 'mynav'}>
           <ul className='navul'>
             <li className={openNav ? 'navli' : 'closed'} id='navheadshot' onClick={mobileNavClick}>
               <a href='#' className='navlogo'>
-                <Bars3Icon className='h-6 w-6 text-gray-400 myicon' viewBox='1' />
+              <img src={Headshot} alt='Isaac Foster' id='headshot'/>
               </a>
             </li>
             <li className='navli' id={ openNav ? 'navhome' : 'navhomeclosed' }>
