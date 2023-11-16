@@ -1,3 +1,4 @@
+/* Desktop css */
 .bodycontainer {
     color: rgb(246, 246, 246);
     display: flex;
@@ -55,4 +56,15 @@
     font-size: 2vmin;
     background-color: whitesmoke;
     color: rgb(172, 172, 172);
+}
+
+/* Mobile CSS */
+@media (max-width: 771px) {
+    .bodycontainer {
+        width: 100%;
+    }
+    .bodycontainer .withnav {
+        width: 90%;
+        padding-left: 10%;
+    }
 }

@@ -1,3 +1,4 @@
+/* Desktop css */
 .mynav {
     position: fixed;
     width: 100%;
@@ -75,4 +76,42 @@
 #navcontact {
     margin-left: 3vmin;
     margin-right: 3vmin;
+}
+
+/* Mobile CSS */
+@media (max-width: 771px) {
+    .mynav {
+        position: fixed;
+        width: 100vw;
+        color: whitesmoke;
+    }
+    .navul {
+        list-style: none;
+        display: flex;
+        flex-direction: left;
+        align-items: center;
+        height: 100%;
+        width: 100VW;
+        padding: 2vmin;
+        margin: 0;
+        font-family: 'HelveticaLTStd-Light';
+    }
+    .navli {
+        display: block;
+        height: 5%;
+        width: 20%;
+        margin: 0;
+    }
+    .navlogo {
+        height: 100%;
+        width: 100%;
+        color: whitesmoke;
+    }
+    .myicon {
+        height: 100%;
+        width: 90%;
+    }
+    #navheadshot {
+        width: 20%;
+    }
 }

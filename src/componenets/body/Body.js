@@ -1,4 +1,4 @@
-import { React, useRef } from 'react';
+import { React, useRef, useState, useEffect, useLayoutEffect } from 'react';
 import './Body.css';
 import Navbar from '../navbar/Navbar';
 import Projects from './projects/Projects';
@@ -11,10 +11,27 @@ const Body = () => {
   const refProject = useRef(null);
   const refResume = useRef(null);
   const refContact = useRef(null);
+  // console.log(document.documentElement.clientWidth);
+  const [windowDimension, setWindowDimension] = useState(null);
+
+  useEffect(() => {
+    setWindowDimension(window.innerWidth);
+  }, []);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimension(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const isMobile = windowDimension < 771;
 
   return (
     <>
-      <Navbar refHome={refHome} refProject={refProject} refResume={refResume} refContact={refContact} />
+      <Navbar refHome={refHome} refProject={refProject} refResume={refResume} refContact={refContact} mobileNav={isMobile} />
       <body className='webbody'>
           <div className='bodycontainer' ref={refHome}>
             <div id='hello'>
