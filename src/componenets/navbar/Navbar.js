@@ -1,6 +1,5 @@
 import { React, useState, useEffect, useRef } from 'react';
-import { 
-  Bars3Icon, 
+import {
   HomeIcon,
   CodeBracketSquareIcon,
   ClipboardDocumentIcon,
@@ -24,35 +23,62 @@ const Navbar = ({ refHome, refProject, refResume, refContact, mobileNav }) => {
     // console.log("scrolled y:" + offset);
     // console.log("scroll height:" + scrollHeight)
     // console.log("client height:" + clientHeight)
-    if (offset > 0 ){
+    if (offset > 0 ) {
       setScrolled(true);
     }
     else {
       setScrolled(false);
     }
-    if ((offset / scrollHeight) * 100 < 16) {
-      setActiveHome(true);
-      setActiveProject(false);
-      setActiveResume(false);
-      setActiveContact(false);
-    }
-    if ((offset / scrollHeight) * 100 > 16) {
-      setActiveHome(false);
-      setActiveProject(true);
-      setActiveResume(false);
-      setActiveContact(false);
-    }
-    if ((offset / scrollHeight) * 100 > 64) {
-      setActiveHome(false);
-      setActiveProject(false);
-      setActiveResume(true);
-      setActiveContact(false);
-    }
-    if ((offset / scrollHeight) * 100 > 80) {
-      setActiveHome(false);
-      setActiveProject(false);
-      setActiveResume(false);
-      setActiveContact(true);
+    if (!mobileNav) {
+      if ((offset / scrollHeight) * 100 < 16) {
+        setActiveHome(true);
+        setActiveProject(false);
+        setActiveResume(false);
+        setActiveContact(false);
+      }
+      if ((offset / scrollHeight) * 100 > 16) {
+        setActiveHome(false);
+        setActiveProject(true);
+        setActiveResume(false);
+        setActiveContact(false);
+      }
+      if ((offset / scrollHeight) * 100 > 64) {
+        setActiveHome(false);
+        setActiveProject(false);
+        setActiveResume(true);
+        setActiveContact(false);
+      }
+      if ((offset / scrollHeight) * 100 > 80) {
+        setActiveHome(false);
+        setActiveProject(false);
+        setActiveResume(false);
+        setActiveContact(true);
+      }
+    } else {
+      if ((offset / scrollHeight) * 100 < 14) {
+        setActiveHome(true);
+        setActiveProject(false);
+        setActiveResume(false);
+        setActiveContact(false);
+      }
+      if ((offset / scrollHeight) * 100 > 14) {
+        setActiveHome(false);
+        setActiveProject(true);
+        setActiveResume(false);
+        setActiveContact(false);
+      }
+      if ((offset / scrollHeight) * 100 > 68) {
+        setActiveHome(false);
+        setActiveProject(false);
+        setActiveResume(true);
+        setActiveContact(false);
+      }
+      if ((offset / scrollHeight) * 100 > 70) {
+        setActiveHome(false);
+        setActiveProject(false);
+        setActiveResume(false);
+        setActiveContact(true);
+      }
     }
   }
 
@@ -83,9 +109,9 @@ const Navbar = ({ refHome, refProject, refResume, refContact, mobileNav }) => {
         <nav className={scrolled ? 'mynav scrolled' : 'mynav'}>
           <ul className='navul'>
             <li className={openNav ? 'navli' : 'closed'} id='navheadshot' onClick={mobileNavClick}>
-              <a href='#' className='navlogo'>
-              <img src={Headshot} alt='Isaac Foster' id='headshot'/>
-              </a>
+              <div className='navlogo'>
+                <img src={Headshot} alt='Isaac Foster' id='headshot' className='navlogo'/>
+              </div>
             </li>
             <li className='navli' id={ openNav ? 'navhome' : 'navhomeclosed' }>
               <button className={
@@ -133,9 +159,9 @@ const Navbar = ({ refHome, refProject, refResume, refContact, mobileNav }) => {
         <nav className={scrolled ? 'mynav scrolled' : 'mynav'}>
           <ul className='navul'>
             <li className='navli' id='navheadshot'>
-              <a href='#' className='navlogo'>
+              <div className='navlogo'>
                 <img src={Headshot} alt='Isaac Foster' id='headshot'/>
-              </a>
+              </div>
             </li>
             <li className='navli' id='navhome'>
               <button className={
