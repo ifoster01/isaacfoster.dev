@@ -73,7 +73,7 @@ const Body = () => {
           </div>
         }
         <div ref={refProject}>
-          <Projects />
+          <Projects isMobile={isMobile} />
         </div>
         <div ref={refResume}>
           <Resume />

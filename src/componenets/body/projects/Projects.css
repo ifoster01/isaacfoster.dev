@@ -95,3 +95,49 @@
     width: 103%;
     transition: 0.3s;
 }
+
+/* Mobile CSS */
+@media (max-width: 771px) {
+    .projectsbody {
+        background: linear-gradient(#b6c5d5, 95%, white);
+    }
+    .projectslist li {
+        margin: 0;
+    }
+    .projectcard {
+        display: flex;
+        flex-direction: column;
+    }
+    .projectwrapper {
+        width: 100%;
+        height: 100%;
+    }
+    .projectwrapper p {
+        padding: 0;
+        margin: 0;
+    }
+    .projectimg {
+        margin-top: 4vmin;
+    }
+    .leftimgcontainer {
+        width: 100%;
+    }
+    .rightimgcontainer {
+        width: 100%;
+    }
+    #aixuscard {
+        margin-top: 10vh;
+    }
+    #readeecard {
+        margin-top: 28vh;
+    }
+    #readeedemo {
+        padding-top: 2vh;
+    }
+    #bidoscard {
+        margin-top: 26vh;
+    }
+    #bplcard {
+        margin-top: 18vh;
+    }
+}

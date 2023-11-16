@@ -23,3 +23,17 @@
     height: 100%;
     width: 100%;
 }
+
+/* Mobile CSS */
+@media (max-width: 771px) {
+    .resumebody {
+        margin-top: -7.11%;
+    }
+    .resumeheader {
+        padding-top: 10vh;
+    }
+    .resumecontainer {
+        width: 80%;
+        height: 54vh;
+    }
+}

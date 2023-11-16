@@ -11,7 +11,7 @@ import BidOSScreen from '../../../assets/bidos screen.png'
 import BPL from '../../../assets/bpl logo.png';
 import BPLScreen from '../../../assets/BPL Screen.png';
 
-const Projects = () => {
+const Projects = ({ isMobile }) => {
   return (
     <body className='projectsbody'>
       <h1 className='projectheader'>
@@ -19,7 +19,7 @@ const Projects = () => {
       </h1>
       <ul className='projectslist'>
         <li className='projectcard' id='aixuscard'>
-        <div className='projectwrapper'>
+          <div className='projectwrapper'>
             <div className='projecttitle'>
                 <img className='titleimg' src={AixusTitle} alt='Aixus Helth' />
             </div>
@@ -33,13 +33,7 @@ const Projects = () => {
             </a>
           </div>
         </li>
-        <li className='projectcard'>
-          <div className='leftimgcontainer'>
-            <video className='projectimg' controls>
-              <source src={ReadeeVideo} type='video/mp4' />
-            </video>
-            {/* <img className='projectimg' id='readeeimg' src={Readee} alt='BestProfessorList'/> */}
-          </div>
+        <li className='projectcard' id='readeecard'>
           <div className='projectwrapper'>
             <div className='projecttitle'>
               <a href='https://github.com/tommycbird/Readee' target='_blank'>
@@ -50,8 +44,14 @@ const Projects = () => {
               Readee is a chrome extension providing users with 3D models and context specific definitions of words they select on a given website. It uses Echo3D's JS SDK, and GPT-4 API via Node.js hosted on an Amazon AWS EC2 instance. The front-end and button injection was made by using HTML, CSS, and JavaScript.
             </p>
           </div>
+          <div className='leftimgcontainer' id='readeedemo'>
+            <video className='projectimg' controls>
+              <source src={ReadeeVideo} type='video/mp4' />
+            </video>
+            {/* <img className='projectimg' id='readeeimg' src={Readee} alt='BestProfessorList'/> */}
+          </div>
         </li>
-        <li className='projectcard'>
+        <li className='projectcard' id='bidoscard'>
           <div className='projectwrapper'>
             <div className='projecttitle'>
               <img className='titleimg' id='bidostitleimg' src={BidOS} alt='BidOS' />
@@ -66,14 +66,7 @@ const Projects = () => {
             </a>
           </div>
         </li>
-        <li className='projectcard'>
-          <div className='leftimgcontainer'>
-            <a href='https://main.d1wj2utf4l5y91.amplifyapp.com/' target='_blank' className='imglink'>
-              <img className='projectimg' id='bplimg' src={BPLScreen} alt='BestProfessorList'/>
-            </a>
-            {/* <div className='imgoverlay'>
-            </div> */}
-          </div>
+        <li className='projectcard' id='bplcard'>
           <div className='projectwrapper'>
             <h1 className='projecttitle'>
               BestProfessorList
@@ -81,6 +74,13 @@ const Projects = () => {
             <p>
               BestProfessorList is a website providing students with a way to search for classes and view a list of the top rated professors for that class. It aims to streamline the class search and registration process for RPI students. The frontent was built using React and Node.js, and the backend was built using AWS DynamoDB.
             </p>
+          </div>
+          <div className='leftimgcontainer'>
+            <a href='https://main.d1wj2utf4l5y91.amplifyapp.com/' target='_blank' className='imglink'>
+              <img className='projectimg' id='bplimg' src={BPLScreen} alt='BestProfessorList'/>
+            </a>
+            {/* <div className='imgoverlay'>
+            </div> */}
           </div>
         </li>
       </ul>

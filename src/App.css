@@ -21,3 +21,15 @@
   /* background: url('./assets/Body\ Background\ 2.jpg') no-repeat left top, linear-gradient(#a8875e, white);; */
   /* background-image: linear-gradient(#a8875e, white); */
 }
+
+/* Mobile CSS */
+@media (max-width: 771px) {
+  .app {
+    background-size: 100vw 100vh;
+    background-color: #b6c5d5;
+    background-image: linear-gradient(
+      to bottom, transparent, #b6c5d5 72%
+    ), url('./assets/Body\ Background\ 2.jpg');
+    background-repeat: no-repeat;
+  }
+}
