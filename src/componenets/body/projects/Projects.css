@@ -100,6 +100,7 @@
 @media (max-width: 771px) {
     .projectsbody {
         background: linear-gradient(#b6c5d5, 95%, white);
+        margin-top: 9vh;
     }
     .projectslist li {
         margin: 0;
@@ -126,18 +127,18 @@
         width: 100%;
     }
     #aixuscard {
-        margin-top: 10vh;
+        margin-top: 12vh;
     }
     #readeecard {
-        margin-top: 28vh;
+        margin-top: 31vh;
     }
     #readeedemo {
         padding-top: 2vh;
     }
     #bidoscard {
-        margin-top: 26vh;
+        margin-top: 29vh;
     }
     #bplcard {
-        margin-top: 18vh;
+        margin-top: 20vh;
     }
 }
