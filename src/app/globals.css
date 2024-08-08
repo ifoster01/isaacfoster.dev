@@ -1,0 +1,31 @@
+/* ORDER MATTERS */
+@layer panda_reset, panda_base, panda_tokens, panda_recipes, radix, panda_utilities;
+@import "@radix-ui/themes/styles.css" layer(radix);
+
+/* Add Theme Overrides */
+@layer radix {
+    .radix-themes {
+        /* Background Colors */
+        --brand-dark-bg: #0d0d0d;
+        --color-background: var(--brand-dark-bg);
+
+        /* Main Colors */
+        --brand-primary: #22c55e;
+        --green-9: var(--brand-primary);
+        --green-a9: var(--brand-primary);
+
+        /* Font (Look at root layout)*/
+        --default-font-family: var(--font-inter);
+
+        /* Cursors */
+        --cursor-button: pointer;
+        --cursor-checkbox: pointer;
+        --cursor-disabled: default;
+        --cursor-link: pointer;
+        --cursor-menu-item: pointer;
+        --cursor-radio: pointer;
+        --cursor-slider-thumb: grab;
+        --cursor-slider-thumb-active: grabbing;
+        --cursor-switch: pointer;
+    }
+}
