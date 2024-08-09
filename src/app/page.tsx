@@ -1,15 +1,34 @@
-import { AspectRatio, VStack } from "../../styled-system/jsx";
+"use client";
+import { AspectRatio, HStack, VStack } from "../../styled-system/jsx";
 import { css } from "@/styled-system/css";
-import { Heading } from "@radix-ui/themes";
+import { Heading, ScrollArea, Text } from "@radix-ui/themes";
 import Image from "next/image";
+import { Navbar } from "./(components)/Navbar";
 
 
 export default function () {
     return (
-        <VStack w='screen' h='screen' justify='center'>
-            <AspectRatio ratio={70 / 51} w='200px'>
-                <Image src={`/thinair.square.dark.svg`} alt='thinair-logo' fill={true} priority />
-            </AspectRatio>
-        </VStack>
+        <ScrollArea
+            scrollbars='vertical'
+            className={css({
+                maxH: 'screen',
+                maxW: 'screen',
+                overflow: 'hidden',
+            })}
+        >
+            <VStack w='screen' h='screen' justify='start' bg='white'>
+                <VStack
+                    w='full'
+                    h='full'
+                    justify='start'
+                    bg='blue'
+                >
+                    <Navbar />
+                    <VStack h='101vh'>
+
+                    </VStack>
+                </VStack>
+            </VStack>
+        </ScrollArea>
     )
 }

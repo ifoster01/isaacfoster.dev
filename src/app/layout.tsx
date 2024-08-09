@@ -11,15 +11,15 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-    title: 'Thin Air - Radix / PandaCSS Starter',
-    description: 'A simple Next.js starter with PandaCSS and Radix UI',
+    title: 'Isaac Foster - Full Stack Engineer',
+    description: 'Motivated and hardworking with a passion for full stack web development.',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
     return (
         <html lang="en" suppressHydrationWarning>
             <body className={`${inter.variable} antialiased `}>
-                <Theme appearance='dark' panelBackground='solid' accentColor="sky" radius="small" className="relative">
+                <Theme panelBackground='solid' accentColor="sky" radius="small" className="relative">
                     {children}
                 </Theme>
             </body>
