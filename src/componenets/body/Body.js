@@ -50,7 +50,7 @@ const Body = () => {
               </div>
             </div>
             <p id='aboutme'>
-              I study computer science at Rensselaer Polytechnic Institute and I'm graduating in Spring 2024. The past two summers I've worked as a software development intern at deFacto Global, a local software solutions company built for budgeting, forecasting, and analysis. Additionally, this past summer I worked as a full stack developer at a startup, Aixus Health, which provides an interface for patients and providers.
+              I graduated with a degree in Computer Science and minor in Economics from Rensselaer Polytechnic Institute in May 2024. The past 10 months I've been working as a full stack developer for a startup, Hirebird, focused on improving the job hiring process. I played an integral role in scaling the web application to 11,000 users and fully implemented the job map page, significant portions of the profile page and a full comprehensive admin dashboard. The previous two summers I worked as a software development intern at deFacto Global, a software solutions company built for budgeting, forecasting, and analysis. Additionally, the previous summer I worked as a full stack developer at a startup, Aixus Health, which provides an interface for patients and providers.
             </p>
           </div>
         :
@@ -64,7 +64,7 @@ const Body = () => {
                 a software developer
               </p>
               <p id='aboutme'>
-                I study computer science at Rensselaer Polytechnic Institute and I'm graduating in Spring 2024. The past two summers I've worked as a software development intern at deFacto Global, a local software solutions company built for budgeting, forecasting, and analysis. Additionally, this past summer I worked as a full stack developer at a startup, Aixus Health, which provides an interface for patients and providers.
+                I graduated with a degree in Computer Science and minor in Economics from Rensselaer Polytechnic Institute in May 2024. The past 10 months I've been working as a full stack developer for a startup, Hirebird, focused on improving the job hiring process. I played an integral role in scaling the web application to 11,000 users and fully implemented the job map page, significant portions of the profile page and a full comprehensive admin dashboard. The previous two summers I worked as a software development intern at deFacto Global, a software solutions company built for budgeting, forecasting, and analysis. Additionally, the previous summer I worked as a full stack developer at a startup, Aixus Health, which provides an interface for patients and providers.
               </p>
             </div>
             <div id='mypicture'>
