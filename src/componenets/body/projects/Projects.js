@@ -1,14 +1,13 @@
 import React from 'react';
 import './Projects.css';
-import Aixus from '../../../assets/aixus logo.png';
+import Pickpockt from '../../../assets/pickpockt long.png';
+import PickpocktScreen from '../../../assets/Pickpockt Web SC.png';
 import AixusTitle from '../../../assets/aixus title logo.png'
 import AixusScreen from '../../../assets/Aixus Dashboard Screen.png';
-import Readee from '../../../assets/readee logo.png';
 import ReadeeVideo from '../../../assets/Readee Demonstration Video.mp4';
 import ReadeeFull from '../../../assets/Readee Logo Full.png'
 import BidOS from '../../../assets/bidos logo.png';
-import BidOSScreen from '../../../assets/bidos screen.png'
-import BPL from '../../../assets/bpl logo.png';
+import BidOSScreen from '../../../assets/bidos screen.png';
 import BPLScreen from '../../../assets/BPL Screen.png';
 
 const Projects = ({ isMobile }) => {
@@ -21,10 +20,25 @@ const Projects = ({ isMobile }) => {
         <li className='projectcard' id='aixuscard'>
           <div className='projectwrapper'>
             <div className='projecttitle'>
+                <img className='titleimg' src={Pickpockt} alt='Aixus Helth' />
+            </div>
+            <p>
+              Pickpockt is a web applications and iOS app that uses machine learning to predict the outcome of UFC and NFL events. The stack consists of a React, Next.js, Tailwind CSS, and TypeScript frontend with a Supabase and Python backend.
+            </p>
+          </div>
+          <div className='rightimgcontainer'>
+            <a href='https://www.pickpockt.com/' target='_blank'>
+              <img className='projectimg' id='pickpocktimg' src={PickpocktScreen} alt='Pickpockt'/>
+            </a>
+          </div>
+        </li>
+        <li className='projectcard' id='aixuscard'>
+          <div className='projectwrapper'>
+            <div className='projecttitle'>
                 <img className='titleimg' src={AixusTitle} alt='Aixus Helth' />
             </div>
             <p>
-              Aixus Health is a startup developing a web application that provides patients with a comprehentive interface to communicate with their healthcare providers with an emphasis on informed consent and outpatient care. The stack consists of a React, Next.js, Tailwind CSS, and TypeScript frontent with a Supabase backend.
+              Aixus Health is a startup developing a web application that provides patients with a comprehentive interface to communicate with their healthcare providers with an emphasis on informed consent and outpatient care. The stack consists of a React, Next.js, Tailwind CSS, and TypeScript frontend with a Supabase backend.
             </p>
           </div>
           <div className='rightimgcontainer'>
@@ -57,7 +71,7 @@ const Projects = ({ isMobile }) => {
               <img className='titleimg' id='bidostitleimg' src={BidOS} alt='BidOS' />
             </div>
             <p>
-              BidOS is an open source crowd funding platform for open source projects. The goal is to provide open source contributors with a way to sustain themselves while working on open source projects. The stack consists of a React and Node.js frontent with a AWS DynamoDB backend.
+              BidOS is an open source crowd funding platform for open source projects. The goal is to provide open source contributors with a way to sustain themselves while working on open source projects. The stack consists of a React and Node.js frontend with a AWS DynamoDB backend.
             </p>
           </div>
           <div className='rightimgcontainer'>
@@ -72,15 +86,13 @@ const Projects = ({ isMobile }) => {
               BestProfessorList
             </h1>
             <p>
-              BestProfessorList is a website providing students with a way to search for classes and view a list of the top rated professors for that class. It aims to streamline the class search and registration process for RPI students. The frontent was built using React and Node.js, and the backend was built using AWS DynamoDB.
+              BestProfessorList is a website providing students with a way to search for classes and view a list of the top rated professors for that class. It aims to streamline the class search and registration process for RPI students. The frontend was built using React and Node.js, and the backend was built using AWS DynamoDB.
             </p>
           </div>
           <div className='leftimgcontainer'>
             <a href='https://main.d1wj2utf4l5y91.amplifyapp.com/' target='_blank' className='imglink'>
               <img className='projectimg' id='bplimg' src={BPLScreen} alt='BestProfessorList'/>
             </a>
-            {/* <div className='imgoverlay'>
-            </div> */}
           </div>
         </li>
       </ul>
