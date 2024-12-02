@@ -23,7 +23,7 @@ const Projects = ({ isMobile }) => {
                 <img className='titleimg' src={Pickpockt} alt='Aixus Helth' />
             </div>
             <p>
-              Pickpockt is a web applications and iOS app that uses machine learning to predict the outcome of UFC and NFL events. The stack consists of a React, Next.js, Tailwind CSS, and TypeScript frontend with a Supabase and Python backend.
+              Pickpockt is a web application and iOS app that uses machine learning to predict the outcome of UFC and NFL events. The stack consists of a React, Next.js, Tailwind CSS, and TypeScript frontend with a Supabase and Python backend.
             </p>
           </div>
           <div className='rightimgcontainer'>

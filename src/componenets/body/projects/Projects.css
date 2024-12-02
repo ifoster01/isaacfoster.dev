@@ -67,6 +67,13 @@
     height: 100%;
     border-radius: 3%;
 }
+#pickpocktimg {
+    transition: 0.3s;
+}
+#pickpocktimg:hover {
+    width: 110%;
+    transition: 0.3s;
+}
 #readeeimg {
     transition: 0.3s;
 }
