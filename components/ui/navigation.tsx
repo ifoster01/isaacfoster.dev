@@ -91,6 +91,7 @@ export function Navigation() {
                         href={href}
                         isActive={activeSection === href.replace('#', '')}
                         onClick={() => setIsOpen(false)}
+                        isMobile={true}
                       >
                         {label}
                       </NavLink>

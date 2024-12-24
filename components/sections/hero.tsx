@@ -5,41 +5,43 @@ import { Parallax } from 'react-parallax'
 import { ScrollButton } from '@/components/client/scroll-button'
 import Image from 'next/image'
 import IsaacFoster from '@/public/Isaac_Foster_No_Bg.png'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
+  const [isHovered, setIsHovered] = useState(false)
   
   // Mouse movement animation values
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
   
-  // Smooth spring physics for natural movement
-  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [15, -15]), {
-    stiffness: 150,
-    damping: 30
+  // Create smooth spring animations for various effects
+  const tiltX = useSpring(useTransform(mouseY, [-0.5, 0.5], [2, -2]), {
+    stiffness: 400,
+    damping: 25
   })
-  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-15, 15]), {
-    stiffness: 150,
+  const tiltY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-2, 2]), {
+    stiffness: 400,
+    damping: 25
+  })
+  const translateZ = useSpring(isHovered ? 20 : 0, {
+    stiffness: 300,
     damping: 30
   })
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return
-    
     const rect = containerRef.current.getBoundingClientRect()
     const centerX = rect.left + rect.width / 2
     const centerY = rect.top + rect.height / 2
-    
-    // Calculate normalized mouse position (-0.5 to 0.5)
     mouseX.set((event.clientX - centerX) / rect.width)
     mouseY.set((event.clientY - centerY) / rect.height)
   }
 
   const handleMouseLeave = () => {
-    // Reset to default position
     mouseX.set(0)
     mouseY.set(0)
+    setIsHovered(false)
   }
 
   return (
@@ -49,14 +51,14 @@ export function Hero() {
       strength={200}
       className="min-h-screen"
     >
-      <section className="min-h-screen flex flex-col justify-center items-center relative p-8 bg-gradient-to-br from-background/50 to-muted/50 backdrop-blur-[2px]">
+      <section className="min-h-screen flex flex-col justify-center items-center relative pt-24 md:pt-8 px-4 md:px-8 pb-8 bg-gradient-to-br from-background/50 to-muted/50 backdrop-blur-[2px]">
         <motion.div 
-          className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 text-center md:text-left"
+          className="max-w-4xl w-full mx-auto flex flex-col md:flex-row items-center gap-12 text-center md:text-left"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="flex-1 order-2 md:order-1">
+          <div className="flex-1 order-2 md:order-1 mt-4 md:mt-0">
             <motion.h1 
               className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-green-600 bg-clip-text text-transparent drop-shadow-lg"
               whileHover={{ scale: 1.05 }}
@@ -83,41 +85,87 @@ export function Hero() {
           
           <motion.div 
             ref={containerRef}
-            className="order-1 md:order-2 relative w-full md:w-[300px] h-[300px] perspective-[1000px] transform-gpu"
+            className="order-1 md:order-2 relative w-full md:w-[320px] h-[320px] perspective-[1000px]"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
+            onMouseEnter={() => setIsHovered(true)}
           >
-            <div className="absolute -inset-8 bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-full blur-2xl transform -rotate-12 scale-110" />
-            <div className="absolute -inset-4 bg-gradient-to-br from-emerald-600/10 to-green-600/10 rounded-[60%] blur-3xl transform rotate-45" />
+            {/* Decorative background elements */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.05)_0%,transparent_70%)] animate-pulse" />
+            <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.02] mix-blend-overlay" />
             
+            {/* Geometric accent shapes */}
             <motion.div 
-              className="relative z-10 h-full"
+              className="absolute -top-4 -right-4 w-24 h-24 border border-emerald-500/20"
+              animate={{
+                rotate: isHovered ? 45 : 0,
+                scale: isHovered ? 1.1 : 1,
+              }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            />
+            <motion.div 
+              className="absolute -bottom-4 -left-4 w-32 h-32 border border-emerald-500/10 rounded-full"
+              animate={{
+                scale: isHovered ? 1.2 : 1,
+              }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            />
+            
+            {/* Main container with glass effect */}
+            <motion.div 
+              className="relative z-10 h-full backdrop-blur-[2px] rounded-2xl overflow-hidden"
               style={{
-                rotateX,
-                rotateY,
+                rotateX: tiltX,
+                rotateY: tiltY,
+                translateZ,
                 transformStyle: "preserve-3d",
               }}
             >
-              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-4/5 h-8 bg-black/30 blur-xl rounded-full transform-gpu scale-x-110" />
+              {/* Subtle gradient overlay */}
+              <motion.div 
+                className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent"
+                animate={{
+                  opacity: isHovered ? 0.8 : 0.3,
+                }}
+                transition={{ duration: 0.4 }}
+              />
               
-              <div className="relative h-full transform-gpu hover:scale-105 transition-transform duration-700">
-                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full blur opacity-70" />
-                <div className="relative bg-background/10 backdrop-blur-sm rounded-full p-2 h-full overflow-hidden">
-                  <div className="relative w-full h-full">
+              {/* Image container with modern border treatment */}
+              <div className="relative h-full group">
+                {/* Animated border gradient */}
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-green-500/20 opacity-0"
+                  animate={{
+                    opacity: isHovered ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.4 }}
+                />
+                
+                {/* Main image */}
+                <div className="relative h-full p-[1px] backdrop-blur-sm">
+                  <div className="relative w-full h-full bg-background/40">
                     <Image 
                       src={IsaacFoster} 
                       alt="Isaac Foster" 
                       fill
+                      priority
                       style={{
                         objectFit: 'contain',
                         objectPosition: 'center bottom',
-                        filter: 'drop-shadow(0 20px 13px rgb(0 0 0 / 0.15)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.2))',
-                        transform: "translateZ(20px)",
                       }}
-                      className="transform transition-all duration-700 hover:rotate-2"
+                      className="transition-transform duration-500"
+                    />
+                    
+                    {/* Hover overlay effect */}
+                    <motion.div 
+                      className="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent opacity-0"
+                      animate={{
+                        opacity: isHovered ? 1 : 0,
+                      }}
+                      transition={{ duration: 0.4 }}
                     />
                   </div>
                 </div>

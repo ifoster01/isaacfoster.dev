@@ -4,77 +4,73 @@ import { useState, useEffect } from 'react'
 
 export function useActiveSection() {
   const [activeSection, setActiveSection] = useState<string>('hero')
-  const [intersectingElements, setIntersectingElements] = useState<Set<string>>(new Set(['hero']))
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          setIntersectingElements((prev) => {
-            const updated = new Set(prev)
-            if (entry.isIntersecting) {
-              updated.add(entry.target.id)
-            } else {
-              updated.delete(entry.target.id)
+          if (entry.isIntersecting) {
+            // Special handling for contact section at the bottom
+            if (entry.target.id === 'contact' && 
+                window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 100) {
+              setActiveSection('contact')
+              return
             }
-            return updated
-          })
+
+            // For other sections, check if they're more than 50% visible
+            if (entry.intersectionRatio > 0.5) {
+              setActiveSection(entry.target.id)
+            }
+          }
         })
       },
       {
-        // Smaller rootMargin to ensure more accurate detection
-        rootMargin: '-45% 0px -45% 0px',
-        // Multiple thresholds for better accuracy
-        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5]
+        rootMargin: '-20% 0px -20% 0px',
+        threshold: [0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0]
       }
     )
 
+    // Observe all sections
     const sections = document.querySelectorAll('section[id]')
     sections.forEach((section) => observer.observe(section))
 
-    // Update active section based on intersection and scroll position
+    // Handle scroll events for edge cases
     const handleScroll = () => {
+      // Top of page - hero section
       if (window.scrollY < 100) {
         setActiveSection('hero')
         return
       }
 
-      // Get all sections and their positions
-      const sectionPositions = Array.from(sections).map((section) => {
+      // Bottom of page - contact section
+      if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 100) {
+        setActiveSection('contact')
+        return
+      }
+
+      // For other positions, find the most visible section
+      const visibleSections = Array.from(sections).map(section => {
         const rect = section.getBoundingClientRect()
-        const viewportHeight = window.innerHeight
-        const visiblePercentage = Math.min(
-          Math.max(
-            0,
-            Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0)
-          ) / viewportHeight,
-          1
-        )
+        const visibleHeight = Math.min(window.innerHeight, rect.bottom) - Math.max(0, rect.top)
+        const visibleRatio = visibleHeight / window.innerHeight
         return {
           id: section.id,
-          visiblePercentage,
+          ratio: visibleRatio,
           top: rect.top
         }
-      })
+      }).filter(section => section.ratio > 0)
 
-      // Find the most visible section
-      const mostVisible = sectionPositions.reduce((prev, current) => {
-        if (current.visiblePercentage > prev.visiblePercentage) {
-          return current
-        }
-        // If equal visibility, prefer the one closer to the top
-        if (current.visiblePercentage === prev.visiblePercentage) {
-          return Math.abs(current.top) < Math.abs(prev.top) ? current : prev
-        }
-        return prev
-      }, sectionPositions[0])
-
-      if (mostVisible && mostVisible.visiblePercentage > 0) {
+      if (visibleSections.length > 0) {
+        const mostVisible = visibleSections.reduce((prev, current) => {
+          if (current.ratio > prev.ratio) return current
+          if (current.ratio === prev.ratio && Math.abs(current.top) < Math.abs(prev.top)) return current
+          return prev
+        })
         setActiveSection(mostVisible.id)
       }
     }
 
-    // Throttle scroll handler for better performance
+    // Throttled scroll handler
     let ticking = false
     const throttledScroll = () => {
       if (!ticking) {
@@ -87,8 +83,7 @@ export function useActiveSection() {
     }
 
     window.addEventListener('scroll', throttledScroll, { passive: true })
-    // Initial check
-    handleScroll()
+    handleScroll() // Initial check
 
     return () => {
       sections.forEach((section) => observer.unobserve(section))
