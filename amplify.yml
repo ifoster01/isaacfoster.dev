@@ -3,7 +3,9 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm ci
+        - rm -rf node_modules
+        - rm -f package-lock.json
+        - npm install
         - npm run lint
     build:
       commands:
