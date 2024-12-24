@@ -1,4 +1,5 @@
 import './globals.css'
+import React from 'react'
 import { Navigation } from '@/components/ui/navigation'
 import { FluidBackground } from '@/components/ui/fluid-background'
 import { Footer } from '@/components/ui/footer'

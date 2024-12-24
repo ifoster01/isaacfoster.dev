@@ -265,55 +265,50 @@ const ChartLegendContent = React.forwardRef<
       hideIcon?: boolean;
       nameKey?: string;
     }
->(
-  (
-    { className, hideIcon = false, payload, verticalAlign = 'bottom', nameKey },
-    ref
-  ) => {
-    const { config } = useChart();
+>(({ className, hideIcon = false, payload, verticalAlign = 'bottom', nameKey }, ref) => {
+  const { config } = useChart();
 
-    if (!payload?.length) {
-      return null;
-    }
-
-    return (
-      <div
-        ref={ref}
-        className={cn(
-          'flex items-center justify-center gap-4',
-          verticalAlign === 'top' ? 'pb-3' : 'pt-3',
-          className
-        )}
-      >
-        {payload.map((item) => {
-          const key = `${nameKey || item.dataKey || 'value'}`;
-          const itemConfig = getPayloadConfigFromPayload(config, item, key);
-
-          return (
-            <div
-              key={item.value}
-              className={cn(
-                'flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3 [&>svg]:text-muted-foreground'
-              )}
-            >
-              {itemConfig?.icon && !hideIcon ? (
-                <itemConfig.icon />
-              ) : (
-                <div
-                  className="h-2 w-2 shrink-0 rounded-[2px]"
-                  style={{
-                    backgroundColor: item.color,
-                  }}
-                />
-              )}
-              {itemConfig?.label}
-            </div>
-          );
-        })}
-      </div>
-    );
+  if (!payload?.length) {
+    return null;
   }
-);
+
+  return (
+    <div
+      ref={ref}
+      className={cn(
+        'flex items-center justify-center gap-4',
+        verticalAlign === 'top' ? 'pb-3' : 'pt-3',
+        className
+      )}
+    >
+      {payload.map((entry) => {
+        const key = `${nameKey || entry.dataKey || 'value'}`;
+        const itemConfig = getPayloadConfigFromPayload(config, entry, key);
+
+        return (
+          <div
+            key={entry.value}
+            className={cn(
+              'flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3 [&>svg]:text-muted-foreground'
+            )}
+          >
+            {itemConfig?.icon && !hideIcon ? (
+              <itemConfig.icon />
+            ) : (
+              <div
+                className="h-2 w-2 shrink-0 rounded-[2px]"
+                style={{
+                  backgroundColor: entry.color,
+                }}
+              />
+            )}
+            {itemConfig?.label}
+          </div>
+        );
+      })}
+    </div>
+  );
+});
 ChartLegendContent.displayName = 'ChartLegend';
 
 // Helper to extract item config from a payload.
@@ -355,6 +350,32 @@ function getPayloadConfigFromPayload(
     : config[key as keyof typeof config];
 }
 
+const CustomTooltip = ({
+  active,
+  payload,
+}: {
+  active?: boolean;
+  payload?: Array<{ value: number }>;
+}) => {
+  if (active && payload?.length) {
+    return (
+      <div className="rounded-lg border bg-background p-2 shadow-sm">
+        <div className="grid grid-cols-2 gap-2">
+          <div className="flex flex-col">
+            <span className="text-[0.70rem] uppercase text-muted-foreground">
+              Value
+            </span>
+            <span className="font-bold text-muted-foreground">
+              {payload[0].value}
+            </span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  return null;
+};
+
 export {
   ChartContainer,
   ChartTooltip,
@@ -362,4 +383,5 @@ export {
   ChartLegend,
   ChartLegendContent,
   ChartStyle,
+  CustomTooltip,
 };

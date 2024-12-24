@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import { scrollToSection } from '@/lib/utils/scroll'
 
 interface NavLinkProps {

@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { ScrollButton } from '@/components/client/scroll-button'
 import Image from 'next/image'
@@ -82,7 +83,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            I'm passionate about creating delightful web experiences that make a real difference. Whether it's a stunning website or a powerful app, I love turning creative ideas into reality.
+            I&apos;m passionate about creating delightful web experiences that make a real difference. Whether it&apos;s a stunning website or a powerful app, I love turning creative ideas into reality.
           </motion.p>
         </div>
         

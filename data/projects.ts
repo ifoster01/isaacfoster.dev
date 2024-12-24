@@ -10,7 +10,7 @@ import AixusDash from "@/public/projects/Aixus-dash.png"
 import Readee from "@/public/projects/Readee.png"
 
 interface ProjectImage {
-  url: any  // Using 'any' here because we accept both imported images and URLs
+  url: any,
   alt: string
 }
 
