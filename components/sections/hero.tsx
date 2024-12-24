@@ -98,7 +98,6 @@ export function Hero() {
         >
           {/* Decorative background elements */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.05)_0%,transparent_70%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.02] mix-blend-overlay" />
           
           {/* Geometric accent shapes */}
           <motion.div 
