@@ -71,8 +71,8 @@ export const projects: Project[] = [
   },
   {
     title: "Aixus",
-    description: "Designed and developed a scalable full-stack web application using React and Next.js, streamlining the job application process for over 11,000 users. Enhanced usability with a real-time job search map and optimized data management through a dynamic admin dashboard.",
-    tags: ["Next.js", "TypeScript", "Radix UI", "Neo4j", "Embeddings Models"],
+    description: "Led the development of a responsive healthcare application, designing an intuitive dashboard and front-end with Next.js. Built a robust backend with Supabase to efficiently store and manage data, delivering a seamless and engaging user experience.",
+    tags: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
     images: [
       {
         url: AixusLP,
@@ -87,8 +87,8 @@ export const projects: Project[] = [
   },
   {
     title: "Readee",
-    description: "Developed a full-stack web application using React and Next.js, enabling users to read and understand complex documents with AI-powered summaries and annotations.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
+    description: "Created a browser extension integrating GPT-4 and Echo3D to deliver contextual definitions and 3D visualizations for web content. Engineered a seamless user experience using JavaScript, HTML, and CSS, with AR/3D rendering powered by the Echo3D SDK.",
+    tags: ["JavaScript", "HTML", "CSS", "Echo3D", "GPT-4"],
     images: [
       {
         url: Readee,

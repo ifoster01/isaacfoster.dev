@@ -7,7 +7,7 @@ export function Contact() {
           I'm always interested in hearing about new projects and opportunities.
         </p>
         <a 
-          href="mailto:your.email@example.com" 
+          href="mailto:ifoster01@gmail.com"
           className="inline-block bg-primary text-primary-foreground px-6 sm:px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
         >
           Contact Me
