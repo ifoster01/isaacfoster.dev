@@ -39,7 +39,7 @@ export class FluidAnimation {
       const x = Math.random() * this.canvas.width;
       const y = Math.random() * this.canvas.height;
       const color = this.colors[Math.floor(Math.random() * this.colors.length)];
-      this.particles.push(new Particle(x, y, color, this.canvas));
+      this.particles.push(new Particle(x, y, color));
     }
   }
 
@@ -52,7 +52,7 @@ export class FluidAnimation {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     
     this.particles.forEach(particle => {
-      particle.update(this.canvas);
+      particle.update(this.canvas.width, this.canvas.height);
       particle.draw(this.ctx);
     });
 
