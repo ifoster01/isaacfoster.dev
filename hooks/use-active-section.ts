@@ -4,8 +4,15 @@ import { useState, useEffect } from 'react'
 
 export function useActiveSection() {
   const [activeSection, setActiveSection] = useState<string>('hero')
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!mounted) return
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -89,7 +96,7 @@ export function useActiveSection() {
       sections.forEach((section) => observer.unobserve(section))
       window.removeEventListener('scroll', throttledScroll)
     }
-  }, [])
+  }, [mounted]) // Only run effect when mounted
 
   return activeSection
 }

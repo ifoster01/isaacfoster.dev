@@ -18,9 +18,16 @@ export function Navigation() {
   const activeSection = useActiveSection()
   const [isOpen, setIsOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   // Check if we need mobile view based on screen width and nav item width
   useEffect(() => {
+    if (!mounted) return
+
     const checkMobileView = () => {
       const navWidth = navItems.length * 100 // Approximate width per nav item
       setIsMobile(window.innerWidth < navWidth)
@@ -29,7 +36,20 @@ export function Navigation() {
     checkMobileView()
     window.addEventListener('resize', checkMobileView)
     return () => window.removeEventListener('resize', checkMobileView)
-  }, [])
+  }, [mounted])
+
+  // Prevent flash of mobile menu on load
+  if (!mounted) {
+    return (
+      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-sm">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between">
+            <div className="flex-1" />
+          </div>
+        </div>
+      </nav>
+    )
+  }
 
   return (
     <nav className={cn(

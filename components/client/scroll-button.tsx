@@ -2,11 +2,20 @@
 
 import { ChevronDown } from 'lucide-react'
 import { scrollToSection } from '@/lib/utils/scroll'
+import { useState, useEffect } from 'react'
 
 export function ScrollButton() {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const handleClick = () => {
     scrollToSection('about')
   }
+
+  if (!mounted) return null
 
   return (
     <button 
