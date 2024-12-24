@@ -7,7 +7,7 @@ import PPPicks from "@/public/projects/pp-picks.png"
 import PPParlay from "@/public/projects/pp-parlay.png"
 import AixusLP from "@/public/projects/Aixus-lp.png"
 import AixusDash from "@/public/projects/Aixus-dash.png"
-import Readee from "@/public/projects/readee.png"
+import Readee from "@/public/projects/Readee.png"
 
 interface ProjectImage {
   url: any  // Using 'any' here because we accept both imported images and URLs
