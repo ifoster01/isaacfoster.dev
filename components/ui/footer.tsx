@@ -9,7 +9,7 @@ export function Footer() {
       <div className="max-w-4xl mx-auto px-8">
         <div className="flex justify-center space-x-6">
           <motion.a
-            href="https://linkedin.com/in/your-profile"
+            href="https://linkedin.com/in/isaac-foster-2024"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
@@ -21,7 +21,7 @@ export function Footer() {
           </motion.a>
           
           <motion.a
-            href="https://github.com/your-username"
+            href="https://github.com/ifoster01"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
